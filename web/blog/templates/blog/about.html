@@ -1,0 +1,29 @@
+{% extends 'blog/base.html' %} <!-- Add this for inheritance -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}About Us {% endblock %}</title>
+</head>
+<body>
+  {% block pagecontent %}
+  <p>
+  
+  <h2><font color="teal">
+      Different technical blogs link have been provided for easy access which will help you during the learning phase of different technologies like:
+  </font></h2>
+  <font size=5 color="blue">
+  <ol>
+    <li>Django</li>
+    <li>Jenkins</li>
+    <li>Ansible</li>
+    <li>Python</li>
+    <li>Kubernetes</li>
+  </ol>
+  </font>
+  </p>
+  
+  {% endblock %}
+</body>
+</html>
