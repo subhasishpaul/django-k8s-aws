@@ -23,9 +23,9 @@ spec:
               name: django-k8s-web-prod-env
         env:
           - name: PORT
-            value: "8002"
+            value: "8005"
         ports:
-        - containerPort: 8002
+        - containerPort: 8005
           
       imagePullSecrets:
         - name: ecrsecret  
@@ -42,6 +42,6 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 8002
+      targetPort: 8005
   selector:
     app: django-k8s-web-deployment

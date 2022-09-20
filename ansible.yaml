@@ -1,0 +1,5 @@
+- hosts: all
+  become: true
+  tasks:
+   - name: create deployment
+     command: kubectl apply -f k8s\app\django-k8s-web.yaml
