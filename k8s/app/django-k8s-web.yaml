@@ -29,16 +29,16 @@ spec:
               name: django-k8s-web-prod-env
         env:
           - name: PORT
-            value: "8003"
+            value: "8001"
         ports:
-        - containerPort: 8003
-        readinessProbe:
-          httpGet:
-            path: http://13.233.146.183
-            port: 32677
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            successThreshold: 1
+        - containerPort: 8001
+        # readinessProbe:
+        #   httpGet:
+        #     path: http://13.233.146.183
+        #     port: 32677
+        #     initialDelaySeconds: 5
+        #     periodSeconds: 5
+        #     successThreshold: 1
           
       imagePullSecrets:
         - name: ecrsecret  
@@ -55,6 +55,6 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 8003
+      targetPort: 8001
   selector:
     app: django-k8s-web-deployment
