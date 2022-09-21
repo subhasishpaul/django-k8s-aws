@@ -34,8 +34,8 @@ spec:
         - containerPort: 8002
         readinessProbe:
           httpGet:
-            path: /
-            port: 8080
+            path: http://13.233.146.183
+            port: 32677
             initialDelaySeconds: 5
             periodSeconds: 5
             successThreshold: 1
