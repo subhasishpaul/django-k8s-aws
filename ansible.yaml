@@ -2,4 +2,4 @@
   become: true
   tasks:
    - name: create deployment
-     command: kubectl set image deployment/django-k8s-web-deployment django-k8s-web=895539560030.dkr.ecr.ap-south-1.amazonaws.com/sp-k8s:v1.$BUILD_ID
+     command: kubectl set image deployment/django-k8s-web-deployment django-k8s-web=895539560030.dkr.ecr.ap-south-1.amazonaws.com/sp-k8s:latest
