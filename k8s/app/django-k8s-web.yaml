@@ -5,7 +5,7 @@ metadata:
   labels:
     app: django-k8s-web-deployment
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: django-k8s-web-deployment
@@ -23,9 +23,9 @@ spec:
               name: django-k8s-web-prod-env
         env:
           - name: PORT
-            value: "8005"
+            value: "8004"
         ports:
-        - containerPort: 8005
+        - containerPort: 8004
           
       imagePullSecrets:
         - name: ecrsecret  
@@ -42,6 +42,6 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 8005
+      targetPort: 8004
   selector:
     app: django-k8s-web-deployment
