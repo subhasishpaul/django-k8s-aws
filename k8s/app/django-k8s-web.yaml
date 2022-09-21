@@ -29,9 +29,9 @@ spec:
               name: django-k8s-web-prod-env
         env:
           - name: PORT
-            value: "8002"
+            value: "8003"
         ports:
-        - containerPort: 8002
+        - containerPort: 8003
         readinessProbe:
           httpGet:
             path: http://13.233.146.183
@@ -55,6 +55,6 @@ spec:
     - name: http
       protocol: TCP
       port: 80
-      targetPort: 8002
+      targetPort: 8003
   selector:
     app: django-k8s-web-deployment
