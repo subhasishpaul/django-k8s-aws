@@ -32,13 +32,13 @@ spec:
             value: "8002"
         ports:
         - containerPort: 8002
-        readinessProbe:
-          httpGet:
-            path: /cloud
-            port: 80
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            successThreshold: 1
+        # readinessProbe:
+        #   httpGet:
+        #     path: /cloud
+        #     port: 80
+        #     initialDelaySeconds: 5
+        #     periodSeconds: 5
+        #     successThreshold: 1
           
       imagePullSecrets:
         - name: ecrsecret  
