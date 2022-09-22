@@ -2,4 +2,4 @@
   become: true
   tasks:
    - name: create deployment
-     command: kubectl apply -f django-k8s-web.yaml
+     command: kubectl apply -f /home/ec2-user/django-k8s-web.yaml
