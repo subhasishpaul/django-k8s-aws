@@ -35,7 +35,7 @@ spec:
         readinessProbe:
           httpGet:
             path: /cloud
-            port: 8080
+            port: 80
             initialDelaySeconds: 5
             periodSeconds: 5
             successThreshold: 1
