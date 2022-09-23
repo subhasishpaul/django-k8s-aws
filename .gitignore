@@ -3,6 +3,7 @@ web/.env
 .env.prod
 web/.env.prod
 *.code-workspace
+*.space
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
